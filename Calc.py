@@ -1,4 +1,4 @@
-print ("Welcome to the CalcProject")
+print ("Welcome to the CalcProject\n")
 
 while True:
     n1 = input("Insert first number:\n")
@@ -6,11 +6,26 @@ while True:
         if float(n1):
             break
     except ValueError:
-        print("Please insert a valid value")
+        print("Please insert a valid value>")
 while True:
-    n2 = input("Insert second number:\n")
+    n2 = input("Insert second number:\n>")
     try: float(n2)
     except ValueError:
         print("Please insert a valid value")
 
-input("Select Operation:\n+\n-\n*\n%")
+while True:
+    op = input("\nSelect Operation:\n+\n-\n*\n%\n")
+    if op=="+":
+        print(float(n1)+float(n2))
+        break
+    if op=="-":
+        print(float(n1)-float(n2))
+        break
+    if op=="*":
+        print(float(n1)*float(n2))
+        break
+    if op=="%":
+        print(float(n1)%float(n2))
+        break
+    else:
+        print("Please enter a valid operation")
