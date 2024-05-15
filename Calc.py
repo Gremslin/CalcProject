@@ -9,7 +9,9 @@ while True:
         print("Please insert a valid value>")
 while True:
     n2 = input("Insert second number:\n>")
-    try: float(n2)
+    try: 
+        if float(n2):
+            break
     except ValueError:
         print("Please insert a valid value")
 
